@@ -1,0 +1,5 @@
+12/17/19
+    Get the canvas to change onload. Use canvas width/height to make new game objects
+    
+12/18/19
+    Deal with the size change on Player.js update size function. Make a switch.
