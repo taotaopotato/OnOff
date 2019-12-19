@@ -8,8 +8,8 @@ class gameCanvas {
     canvasUpdate() {
         this.width = canvas.width  = window.innerWidth - 20;
         this.height = canvas.height = window.innerHeight - 20;
-        console.log(canvas.width);
-        console.log(canvas.height);
+//        console.log(canvas.width);
+//        console.log(canvas.height);
     }
 }
 ///////////////
