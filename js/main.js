@@ -13,20 +13,24 @@ let inputhandler = new inputHandler;
 let player = new Player;
 ////////////////
 
+//  Level 1
+let gameblock = new gameBlock();
+///////////
+
 // Players size in relation to canvas
 const PLAYER_SPEED = gamecanvas.width / 200;
 /////////////////////////////////////
 
 // Canvas set up 
 updateGameSize();
-player.updatePosition();
+player.setPosition();
 ////////////////
 
 // Initialize Game Loop
 function gameLoop() {
     ctx.clearRect(0, 0, gamecanvas.width, gamecanvas.height)
+    gameblock.draw();   
     window.addEventListener('resize', updateGameSize, false)
-    console.log(player.position.x);
     player.updateMove();
     requestAnimationFrame(gameLoop);
 }
@@ -38,6 +42,6 @@ gameLoop();
 function updateGameSize() {
     gamecanvas.canvasUpdate();
     player.updateSize();
-//    player.updatePosition();
+    player.updatePosition();
 }
 //////////////

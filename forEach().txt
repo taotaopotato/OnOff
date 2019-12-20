@@ -1,0 +1,7 @@
+let data = [0, 0, 10, 0 , 0, 10, 2, 2, 0];
+
+data.forEach(function(item, index) {
+    if (item == 0) {
+        print(index);
+    }
+}); 
