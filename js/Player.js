@@ -28,7 +28,6 @@ class Player {
         ctx.fillRect(this.position.x, this.position.y, this.size, this.size)
     }
     updateMove() {
-        console.log(this.position.x);
         this.position.x += this.speed.x;
         this.position.y += this.speed.y;
         this.draw();
@@ -43,7 +42,8 @@ class Player {
 
 // Used when resized
     updatePosition() {
-        // needs to be added
+        this.position.x *= (gamecanvas.width / previousCanvasWidth);
+        this.position.y *= (gamecanvas.height / previousCanvasHeight);
     }
     updateSize() {
         this.size = (gamecanvas.width + gamecanvas.height) / 2 * PLAYER_RATIO;

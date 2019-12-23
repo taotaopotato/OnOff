@@ -13,8 +13,13 @@ let inputhandler = new inputHandler;
 let player = new Player;
 ////////////////
 
+// Used for resizing
+let previousCanvasHeight = gamecanvas.height;
+let previousCanvasWidth = gamecanvas.width;
+////////////////////
+
 //  Level 1
-let gameblock = new gameBlock();
+levelOne();
 ///////////
 
 // Players size in relation to canvas
@@ -29,7 +34,6 @@ player.setPosition();
 // Initialize Game Loop
 function gameLoop() {
     ctx.clearRect(0, 0, gamecanvas.width, gamecanvas.height)
-    gameblock.draw();   
     window.addEventListener('resize', updateGameSize, false)
     player.updateMove();
     requestAnimationFrame(gameLoop);
@@ -38,10 +42,13 @@ gameLoop();
 
 ///////////////////////
 
+
 // Update Size
 function updateGameSize() {
     gamecanvas.canvasUpdate();
     player.updateSize();
     player.updatePosition();
+    previousCanvasWidth = gamecanvas.width;
+    previousCanvasHeight = gamecanvas.height;
 }
 //////////////
