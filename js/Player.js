@@ -42,8 +42,8 @@ class Player {
 
 // Used when resized
     updatePosition() {
-        this.position.x *= (gamecanvas.width / previousCanvasWidth);
-        this.position.y *= (gamecanvas.height / previousCanvasHeight);
+        this.position.x *= gamecanvas.width / previousCanvasWidth;
+        this.position.y *= gamecanvas.height / previousCanvasHeight;
     }
     updateSize() {
         this.size = (gamecanvas.width + gamecanvas.height) / 2 * PLAYER_RATIO;

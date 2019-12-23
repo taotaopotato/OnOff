@@ -13,6 +13,10 @@ let inputhandler = new inputHandler;
 let player = new Player;
 ////////////////
 
+// Define Ground Array
+let gameBlocks = [];
+//////////////////////
+
 // Used for resizing
 let previousCanvasHeight = gamecanvas.height;
 let previousCanvasWidth = gamecanvas.width;
@@ -36,6 +40,9 @@ function gameLoop() {
     ctx.clearRect(0, 0, gamecanvas.width, gamecanvas.height)
     window.addEventListener('resize', updateGameSize, false)
     player.updateMove();
+    gameBlocks.forEach(function(item) {
+        item.draw();
+    })
     requestAnimationFrame(gameLoop);
 }
 gameLoop();

@@ -33,7 +33,9 @@ class gameLevel{
     makeLevel() {
         this.gameData.forEach(function(item, index) {
             if (item == 1) {
-                // Add gameBlock element
+                console.log(index + 1);
+                let gameblock = new gameBlock(index + 1);
+                gameBlocks.push(gameblock);
             }
         }); 
     }
