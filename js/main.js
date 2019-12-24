@@ -43,6 +43,7 @@ function gameLoop() {
     gameBlocks.forEach(function(item) {
         item.draw();
     })
+    gravity();
     requestAnimationFrame(gameLoop);
 }
 gameLoop();

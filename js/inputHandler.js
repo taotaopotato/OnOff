@@ -13,10 +13,10 @@ class inputHandler {
         document.addEventListener('keyup', (event) => {
             switch (event.keyCode) {
                 case 37:
-                    if (player.speed.x < 0) player.stop();
+                    if (player.speed.x < 0) player.stopX();
                     break;
                 case 39:
-                    if (player.speed.x > 0) player.stop();
+                    if (player.speed.x > 0) player.stopX();
                     break;
             }
         });

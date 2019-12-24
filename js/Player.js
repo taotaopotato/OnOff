@@ -2,49 +2,51 @@ class Player {
     constructor() {
         this.size = 0;
         this.speed = {
-            x : 0,
-            y : 0 
+            x: 0,
+            y: 0
         }
         this.position = {
-            x : 0,
-            y : 0
+            x: 0,
+            y: 0
         }
         this.updateSize();
     }
-    
-    gravity() {
-        // Needs to be added
-    }
+
     moveLeft() {
         this.speed.x = -PLAYER_SPEED;
     }
     moveRight() {
         this.speed.x = PLAYER_SPEED;
     }
-    stop() {
-        this.speed.x = 0
+    drop() {
+        this.speed.y = PLAYER_SPEED;
     }
 
+    stopX() {
+        this.speed.x = 0;
+    }
+    stopY() {
+        this.speed.y = 0;
+    }
 
     draw() {
         ctx.fillStyle = "gray";
         ctx.fillRect(this.position.x, this.position.y, this.size, this.size)
     }
     updateMove() {
-        this.gravity();
         this.position.x += this.speed.x;
         this.position.y += this.speed.y;
         this.draw();
     }
 
-// Used when to set game
+    // Used when to set game
     setPosition() {
         this.position.x = gamecanvas.width / 2 - this.size / 2;
         this.position.y = gamecanvas.height / 2 - this.size * 4;
     }
-////////////////////////
+    ////////////////////////
 
-// Used when resized
+    // Used when resized
     updatePosition() {
         this.position.x *= gamecanvas.width / previousCanvasWidth;
         this.position.y *= gamecanvas.height / previousCanvasHeight;

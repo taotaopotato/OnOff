@@ -8,8 +8,6 @@ class gameBlockA {
             this.position.x = 20;
             this.position.y -= 1;
         }
-//        console.log(this.position.x);
-//        console.log(this.position.y);
     }
     draw() {
         ctx.fillStyle = '#3c3c3c';
