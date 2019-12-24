@@ -6,3 +6,7 @@
 
 12/22/19
     Use square root function to organize the blocks for drawing. 
+
+12/23/19
+    Fix jumping function.
+    

@@ -8,6 +8,9 @@ class inputHandler {
                 case 39:
                     player.moveRight();
                     break;
+                case 38:
+                    // jump
+                    break;
             }
         });
         document.addEventListener('keyup', (event) => {

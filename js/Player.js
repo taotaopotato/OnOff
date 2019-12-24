@@ -9,6 +9,8 @@ class Player {
             x: 0,
             y: 0
         }
+        this.gravity = true;
+        this.canJump = true;
         this.updateSize();
     }
 
