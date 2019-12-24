@@ -12,6 +12,9 @@ class Player {
         this.updateSize();
     }
     
+    gravity() {
+        // Needs to be added
+    }
     moveLeft() {
         this.speed.x = -PLAYER_SPEED;
     }
@@ -28,6 +31,7 @@ class Player {
         ctx.fillRect(this.position.x, this.position.y, this.size, this.size)
     }
     updateMove() {
+        this.gravity();
         this.position.x += this.speed.x;
         this.position.y += this.speed.y;
         this.draw();
@@ -36,7 +40,7 @@ class Player {
 // Used when to set game
     setPosition() {
         this.position.x = gamecanvas.width / 2 - this.size / 2;
-        this.position.y = gamecanvas.height / 2 - this.size / 2;
+        this.position.y = gamecanvas.height / 2 - this.size * 4;
     }
 ////////////////////////
 

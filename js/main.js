@@ -10,7 +10,6 @@ const PLAYER_RATIO = 1/20
 // Define 'new's
 let gamecanvas = new gameCanvas;
 let inputhandler = new inputHandler;
-let player = new Player;
 ////////////////
 
 // Define Ground Array
@@ -23,6 +22,7 @@ let previousCanvasWidth = gamecanvas.width;
 ////////////////////
 
 //  Level 1
+let player = new Player;
 levelOne();
 ///////////
 
